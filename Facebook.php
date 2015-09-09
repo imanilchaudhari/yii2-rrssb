@@ -7,6 +7,7 @@ namespace imanilchaudhari\rrssb;
  */
 class Facebook extends \imanilchaudhari\rrssb\Widget
 {
+    
     public function run()
     {
         Assets::register();

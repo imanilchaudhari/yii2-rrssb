@@ -7,6 +7,7 @@ namespace imanilchaudhari\rrssb;
  */
 class GooglePlus extends \imanilchaudhari\rrssb\Widget
 {
+    
     public function run()
     {
         return "Hello!";

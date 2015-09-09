@@ -12,42 +12,28 @@ class ShareBar extends \yii\base\Widget
     
     // Email, Facebook, Twitter, GooglePlus, LinkedIn
     public $networks = [
-        'Email' => [
-            'subject' => ''
-        ],
-        'Facebook' => [
-            'href' => 'http://www.facebook.com/page',
-            'action' => 'recommend',
-            'colorscheme' => 'light',
-            'width' => '200px'
-        ],
-        'Twitter' => [
-            'data-via' => 'imanilchaudhari'
-        ],
-        'GooglePlus' => [            
-			"size"=>"medium",
-			"annotation"=>"bubble",
-        ],
+        'Email' => [],
+        'Facebook' => [],
+        'Twitter' => [],
+        'GooglePlus' => [],
         'LinkedIn' => []
     ]; 
 
     public function init(){
 		parent::init();
-		Assets::register();
-        if(!$this->url)
+		if(!$this->url)
             $this->url = Yii::$app->request->absoluteUrl;
         if(!$this->title)
             $this->title = Yii::$app->name;
-            
-        
 	}
     
     public function run()
     {
+        Assets::register($this->getView());       
         $views = '';
-		foreach($this->networks as $network => $params)
-			$views .= $this->render(strtolower($network), ['title' => $this->title, 'url' => $this->url], true);            
-            
+		foreach($this->networks as $network => $params){	  
+          $views .= $this->render(strtolower($network), ['title' => $this->title, 'url' => $this->url], true);     
+		}   
         return $this->render('sharebar', ['views'=>$views]);
     }
 }
