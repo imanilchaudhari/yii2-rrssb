@@ -3,7 +3,7 @@
 namespace imanilchaudhari\rrssb;
 
 
-class Widget extends \yii\base\Widget
+class ShareBar extends \yii\base\Widget
 {
     public $style;
     public $network = []; // Email, Facebook, Twitter, GooglePlus, LinkedIn
