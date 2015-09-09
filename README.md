@@ -30,7 +30,18 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \imanilchaudhari\rrssb\ShareBar::widget(['Email', 'Facebook', 'Twitter', 'GooglePlus', 'LinkedIn']); ?>
+<?= \imanilchaudhari\rrssb\ShareBar::widget([
+        'title' => 'Title Content', // i.e. $model->title
+        'url' => Yii::$app->request->absoluteUrl, 
+        'networks' => [
+            'Email', 
+            'Facebook', 
+            'Twitter', 
+            'GooglePlus', 
+            'LinkedIn'
+        ]
+    ]); 
+?>
 
 ```
 
