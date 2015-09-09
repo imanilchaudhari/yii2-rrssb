@@ -28,4 +28,8 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \imanilchaudhari\rrssb\AutoloadExample::widget(); ?>```
+<?= \imanilchaudhari\rrssb\Email::widget(); ?>
+<?= \imanilchaudhari\rrssb\Facebook::widget(); ?>
+<?= \imanilchaudhari\rrssb\LinkedIn::widget(); ?>
+<?= \imanilchaudhari\rrssb\Twitter::widget(); ?>
+<?= \imanilchaudhari\rrssb\GooglePlus::widget(); ?>```
