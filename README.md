@@ -1,4 +1,4 @@
-Yii2 rrssb - A social share bar for Yii2.
+Yii2 rrssb - A social share bar widget for Yii2.
 =========================================
 This is a responsive social bar widget for Yii2 projects. 
 
@@ -28,7 +28,9 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \imanilchaudhari\rrssb\ShareBar::widget(['Email', 'Facebook', 'Twitter', 'GooglePlus', 'LinkedIn']); ?>```
+<?= \imanilchaudhari\rrssb\ShareBar::widget(['Email', 'Facebook', 'Twitter', 'GooglePlus', 'LinkedIn']); ?>
+
+```
 
 
 About
