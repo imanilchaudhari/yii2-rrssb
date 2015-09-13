@@ -9,4 +9,11 @@ class Assets extends AssetBundle{
     public $css = [
         'rrssb.css',
     ];
+    public $js = [
+        'rrssb.min.js',
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+    ];
 }
