@@ -8,23 +8,31 @@ use imanilchaudhari\rrssb\Assets;
 class ShareBar extends \yii\base\Widget
 {
     public $title;
-    public $url;
+    public $media;
     
-    // Email, Facebook, Twitter, GooglePlus, LinkedIn
+    // Email, Facebook, Github,  GooglePlus, Hackernews, LinkedIn, Pinterest, Pocket, Reddit, Tumblr, Twitter, Vk, Youtube 
     public $networks = [
-        'Email' => [],
-        'Facebook' => [],
-        'Twitter' => [],
-        'GooglePlus' => [],
-        'LinkedIn' => []
+        'Email',
+        'Facebook',
+        'Github',
+        'GooglePlus',
+        'Hackernews',
+        'LinkedIn',
+        'Pinterest',
+        'Pocket',
+        'Reddit',
+        'Tumblr',
+        'Twitter',
+        'Vk',
+        'Youtube'       
     ]; 
 
     public function init(){
 		parent::init();
-		if(!$this->url)
-            $this->url = Yii::$app->request->absoluteUrl;
-        if(!$this->title)
+		if(!$this->title)
             $this->title = Yii::$app->name;
+        if(!$this->media)
+            $this->media = Yii::$app->urlManager->baseUrl.'/logo.png';
 	}
     
     public function run()
@@ -32,7 +40,7 @@ class ShareBar extends \yii\base\Widget
         Assets::register($this->getView());       
         $views = '';
 		foreach($this->networks as $network => $params){	  
-          $views .= $this->render(strtolower($network), ['title' => $this->title, 'url' => $this->url], true);     
+          $views .= $this->render(strtolower($params), ['title' => $this->title, 'media' => $this->media, 'url' => Yii::$app->request->absoluteUrl], true);     
 		}   
         return $this->render('sharebar', ['views'=>$views]);
     }
