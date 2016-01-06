@@ -2,7 +2,7 @@ Yii2 rrssb - A responsive social share bar widget for Yii2.
 ===========================================================
 This is a responsive social bar widget for Yii2 projects. They said "Ridiculously Responsive Social Sharing Buttons" to it.
 
-![alt tag](https://github.com/kni-labs/rrssb/raw/master/media/rrssb-preview.gif)
+![alt tag](https://camo.githubusercontent.com/0d876ead69e4b09d4afecf32272e005ec11addb8/687474703a2f2f6b7572746e6f626c652e636f6d2f6c6162732f72727373622f6d656469612f72727373622d707265766965772e676966)
 
 Installation
 ------------
