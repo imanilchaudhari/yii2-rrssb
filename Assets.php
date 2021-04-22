@@ -4,8 +4,9 @@ namespace imanilchaudhari\rrssb;
 
 use yii\web\AssetBundle;
 
-class Assets extends AssetBundle{
-	public $sourcePath = '@imanilchaudhari/rrssb/assets';
+class Assets extends AssetBundle
+{
+    public $sourcePath = '@imanilchaudhari/rrssb/assets';
     public $css = [
         'rrssb.css',
     ];
@@ -14,6 +15,5 @@ class Assets extends AssetBundle{
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
     ];
 }
